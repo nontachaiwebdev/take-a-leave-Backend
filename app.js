@@ -1,21 +1,15 @@
-// const express = require('express')
-const cors = require('cors')
+import cors from 'cors'
 import express from 'express'
-
-const corsOptions = {
-  origin: new RegExp(process.env.CORS_ORIGIN) || '*'
-}
+import { CORS_OPTIONS, SERVER_PORT } from './config/server'
+import { NODE_ENV } from './config/env'
 
 const app = express()
 
-app.use(cors(corsOptions))
-
-const NODE_ENV = process.env.NODE_ENV || 'developement'
+app.use(cors(CORS_OPTIONS))
 
 
 if (NODE_ENV !== 'test') {
-  const port = 3003
-  app.listen(port, () => {
-    console.log(`PKCD SERVER IS RUNNING AT PORT ${port}.`)
+  app.listen(SERVER_PORT, () => {
+    console.log(`PKCD SERVER IS RUNNING AT PORT ${SERVER_PORT}.`)
   })
 }
