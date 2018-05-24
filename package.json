@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/nontachaiwebdev/take-a-leave-Backend/issues"
   },
-  "homepage": "https://github.com/nontachaiwebdev/take-a-leave-Backend#readme"
+  "homepage": "https://github.com/nontachaiwebdev/take-a-leave-Backend#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3"
+  }
 }
