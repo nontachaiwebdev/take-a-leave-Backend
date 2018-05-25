@@ -1,5 +1,9 @@
-function getLeftlet (req, res, next) {
-  console.log('Get meth')
+function getLeftletById (req, res, next) {
+
+}
+
+function getLeftletList (req, res, next) {
+
 }
 
 function createLeftlet (req, res, next) {
@@ -16,7 +20,8 @@ function deleteLeftlet (req, res, next) {
 
 
 export default {
-  get: getLeftlet,
+  get: getLeftletById,
+  list: getLeftletList,
   create: createLeftlet,
   update: updateLeftlet,
   delete: deleteLeftlet
