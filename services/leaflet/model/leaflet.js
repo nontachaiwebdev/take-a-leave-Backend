@@ -33,6 +33,8 @@ const Leaflet = new Schema({
       'pending'
     ]
   }
+}, {
+  timestamps: true
 })
 
-module.exports = Mongoose.model('Leaflet', Leaflet)
+export default Mongoose.model('Leaflet', Leaflet)

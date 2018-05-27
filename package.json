@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "babel-node app.js",
-    "dev": "nodemon --exec npm start"
+    "dev": "nodemon --exec npm start",
+    "test": "NODE_ENV=test node_modules/.bin/mocha --require babel-polyfill --compilers js:babel-core/register --timeout 120000 --exit -- test/**/*.js services/**/tests/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -21,10 +21,16 @@
   "dependencies": {
     "cors": "^2.8.4",
     "express": "^4.16.3",
+    "http-status": "^1.1.2",
     "mongoose": "^5.1.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "mongodb-prebuilt": "^6.3.6",
+    "supertest": "^3.1.0"
   }
 }

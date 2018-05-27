@@ -25,3 +25,5 @@ if (NODE_ENV !== 'test') {
     console.log(`PKCD SERVER IS RUNNING AT PORT ${SERVER_PORT}.`)
   })
 }
+
+export default app

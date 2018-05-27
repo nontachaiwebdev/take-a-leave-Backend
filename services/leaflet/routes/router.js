@@ -4,6 +4,7 @@ import leftlet from '../controller/leaflet'
 const router = express.Router()
 
 router.route('/')
-  .get(leftlet.get)
+  .get(leftlet.list)
+  .post(leftlet.create)
 
 export default router
